@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search results</title>
+</head>
+<body>
+    {% if some_text %}
+        <h1>{{ some_text }}</h1>
+        {% if search_results %}
+            <h4>Search results:</h4>
+            {% for result in search_results %}
+                <div>
+                    <div style="width: 500, height: 200">{{ result.name }}</div>
+                    <div>{{ result.price }}</div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endif %}
+</body>
+</html>

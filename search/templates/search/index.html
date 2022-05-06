@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+</head>
+<body>
+    {% if some_text %}
+        <h1>Search</h1>
+        <h2>Please, type a city name</h2>
+        <form action="/search/" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Submit">
+        </form>
+    {% endif %}
+</body>
+</html>
